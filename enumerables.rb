@@ -60,6 +60,5 @@ end
 # given an array of spicy foods, return an integer representing 
 # the average heat level of all the spicy foods in the array
 def average_heat_level(spicy_foods)
-  heat_levels = spicy_foods.map { |food| food[:heat_level] }
-  heat_levels.sum / heat_levels.length
+  spicy_foods.sum { |food| food[:heat_level] } / spicy_foods.length
 end
